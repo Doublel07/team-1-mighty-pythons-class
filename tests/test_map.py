@@ -15,4 +15,14 @@ class TestMap(TestCase):
 
 
 
+    def test_valid_position(self):
+        test_map = GameMap()
+        test_position_values = []
+        for i in range(10):
+            for j in range(10):
+                test_position_values.append(tuple([i, j]))
 
+        #unique_roll_values = list(set(roll_values))
+        #self.assertGreater(len(unique_roll_values), 1)
+
+       

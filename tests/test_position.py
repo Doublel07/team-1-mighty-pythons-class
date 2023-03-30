@@ -15,22 +15,22 @@ class TestPosition(TestCase):
 
     def postion_y(self):
         testobj = Position(0, 10)
-        booleanValue = IsPositionValid(testobj)
+        booleanValue = is_valid_position(testobj)
         self.assertEqual(booleanValue, False)
 
     def postion_y_neg(self):
         testobj = Position(0,-1)
-        booleanValue = IsPositionValid(testobj)
+        booleanValue = is_valid_position(testobj)
         self.assertEqual(booleanValue, False)
 
     def postion_x(self):
         testobj = Position(10, 0)
-        booleanValue = IsPositionValid(testobj)
+        booleanValue = is_valid_position(testobj)
         self.assertEqual(booleanValue, False)
 
     def postion_x_neg(self):
         testobj = Position(-1, 0)
-        booleanValue = IsPositionValid(testobj)
+        booleanValue = is_valid_position(testobj)
         self.assertEqual(booleanValue, False)
 
     def test_equal(self):

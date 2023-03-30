@@ -13,14 +13,14 @@ class Direction(Enum):
 class GameMap:
     starting_position: Position = Position(0, 0)
     size: Tuple[int, int] = (9, 9)
-    position_count: int
+    position_count: int = 0
     positions: List[Position]
 
     def __init__(self):
         self.create_positions()
 
     def create_positions(self) -> None:
-        pass
+        position_count = 0
 
     def is_valid_position(self, position: Position) -> bool:
         pass

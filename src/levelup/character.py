@@ -21,3 +21,6 @@ class Character:
 
     def move(self, direction: Direction):
         pass
+    
+    def FakeMove(direction):
+        pass

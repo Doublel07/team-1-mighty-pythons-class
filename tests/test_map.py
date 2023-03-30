@@ -13,8 +13,6 @@ class TestMap(TestCase):
         self.assertEqual(expected_map_size, test_map.size)
         self.assertEqual(expected_map_position_count, test_map.position_count)
 
-
-
     def test_valid_position(self):
         test_map = GameMap()
         test_position_values = []

@@ -22,7 +22,6 @@ class TestMap(TestCase):
             for j in range(10):
                booleanValue = test_map.is_valid_position(Position(i, j))
                self.assertEqual(booleanValue,True)
-        #unique_roll_values = list(set(roll_values))
-        #self.assertGreater(len(unique_roll_values), 1)
+    
 
        

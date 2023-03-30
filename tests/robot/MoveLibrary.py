@@ -19,7 +19,7 @@ class MoveLibrary:
 
     def move_in_direction(self, direction):
         self.controller = GameController()
-        self.controllr.set_character_position((self.start_x, self.start_y))
+        self.controller.set_character_position((self.start_x, self.start_y))
 
         self.controller.move(Direction[direction])
 

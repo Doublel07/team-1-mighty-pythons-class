@@ -23,7 +23,7 @@ class GameMap:
         pass
 
     def is_valid_position(self, position: Position) -> bool:
-        pass
+        return True
 
     def calculate_position(
         self, starting_position: Position, direction: Direction

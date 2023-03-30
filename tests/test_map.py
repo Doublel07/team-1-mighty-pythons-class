@@ -20,8 +20,8 @@ class TestMap(TestCase):
         test_position_values = []
         for i in range(10):
             for j in range(10):
-                test_position_values.append(tuple([i, j]))
-
+               booleanValue = test_map.is_valid_position(Position(i, j))
+               self.assertEqual(booleanValue,True)
         #unique_roll_values = list(set(roll_values))
         #self.assertGreater(len(unique_roll_values), 1)
 

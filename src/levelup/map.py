@@ -12,7 +12,7 @@ class Direction(Enum):
 
 class GameMap:
     starting_position: Position = Position(0, 0)
-    size: Tuple[int, int] = (10, 10)
+    size: Tuple[int, int] = (9, 9)
     position_count: int
     positions: List[Position]
 

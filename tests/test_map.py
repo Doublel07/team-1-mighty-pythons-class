@@ -9,7 +9,7 @@ class TestMap(TestCase):
         expected_map_starting_position: Position = Position(0, 0)
 
         self.assertEqual(expected_map_starting_position, test_map.starting_position)
-        self.assertEqual(expected_map_map_size, test_map.size)
+        self.assertEqual(expected_map_size, test_map.size)
         self.assertIsNone(test_map.size)
         self.assertIsNone(test_map.starting_position)
 

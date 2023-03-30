@@ -1,6 +1,6 @@
 from unittest import TestCase
 from levelup.map import GameMap
-
+from levelup.position import Position
 
 class TestMap(TestCase):
     def test_init(self):

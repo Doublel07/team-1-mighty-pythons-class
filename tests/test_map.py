@@ -5,13 +5,13 @@ from levelup.map import GameMap
 class TestMap(TestCase):
     def test_init(self):
         test_map = GameMap()
-        expected_map_minimum_value: Tuple[int, int] = (0, 0)
-        expected_map_maximum_value: Tuple[int, int] = (9, 9)
+        expected_map_size: Tuple[int, int] = (9, 9)
+        expected_map_starting_position: Position = Position(0, 0)
 
-        self.assertEqual(expected_map_minimum_value, test_map.minimum_value)
-        self.assertEqual(expected_map_maximum_value, test_map.maximum_value)
-        self.assertIsNone(test_map.value)
-
+        self.assertEqual(expected_map_starting_position, test_map.starting_position)
+        self.assertEqual(expected_map_map_size, test_map.size)
+        self.assertIsNone(test_map.size)
+        self.assertIsNone(test_map.starting_position)
 
 
 

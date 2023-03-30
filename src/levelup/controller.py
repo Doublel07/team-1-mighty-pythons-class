@@ -9,6 +9,8 @@ from levelup.position import Position
 class GameStatus:
     move_count: int = 0
     running: bool = False
+    Character: Character = Character(DEFAULT_CHARACTER_NAME)
+    current_postion: tuple = (-1,-1)
     current_position: Position = None
 
     def __str__(self):

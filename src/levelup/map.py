@@ -20,7 +20,7 @@ class GameMap:
         self.create_positions()
 
     def create_positions(self) -> None:
-        position_count = 0
+        pass
 
     def is_valid_position(self, position: Position) -> bool:
         pass

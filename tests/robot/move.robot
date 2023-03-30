@@ -13,7 +13,8 @@ Valid Move #6              6             5             9                     WES
 Invalid Move #7            1             9             15                    NORTH         1           9
 Invalid Move #8            9             9             20                    EAST          9           9
 Invalid Move #9            5             9             25                    NORTH         5           9
-Invalid Move #10           9             5             30                    EAST          9           5     
+Invalid Move #10           9             5             30                    EAST          9           5 
+Start Game #11                                                                             5           5    
 
 
 *** Keywords ***

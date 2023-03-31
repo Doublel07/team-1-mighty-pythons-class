@@ -20,7 +20,11 @@ class Character:
         pass
 
     def move(self, direction: Direction):
-        pass
+        next_position = self.map.calculate_position(self.position, direction)
+        if self.map.is_valid_position(next_position):
+            self.position = next_position
+        else:
+            raise InvalidMoveException(f"You cannot move to position {next_position}")
 
     def getName(self):
         return self.name

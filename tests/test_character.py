@@ -23,9 +23,54 @@ class TestCharacter(TestCase):
         expected_position = Position(0, 1)
         self.assertEqual(expected_position, testobj)
 
-    def test_move(self):
-        expected_name = "arbitrary"
-        testobj_char = Character(expected_name)
-        testMove = Direction.NORTH
-        testobj_char.move(testMove)
-        #self.assertEqual(testobj_char.position, tuple(6,5))
+    def test_valid_moves(self):
+        testobj = Character("")
+        testobj.enter_map(GameMap())
+
+        testobj.position = Position(0, 0)
+        testobj.move(Direction.NORTH)
+        expected_position = Position(0, 1)
+        self.assertEqual(str(testobj.position), str(expected_position))
+
+        testobj.position = Position(0, 1)
+        testobj.move(Direction.SOUTH)
+        expected_position = Position(0, 0)
+        self.assertEqual(str(testobj.position), str(expected_position))
+
+        testobj.position = Position(0, 0)
+        testobj.move(Direction.EAST)
+        expected_position = Position(1, 0)
+        self.assertEqual(str(testobj.position), str(expected_position))
+
+        testobj.position = Position(1, 0)
+        testobj.move(Direction.WEST)
+        expected_position = Position(0, 0)
+        self.assertEqual(str(testobj.position), str(expected_position))
+
+    def test_invalid_moves(self):
+        testobj = Character("")
+        testobj.enter_map(GameMap())
+
+        testobj.position = Position(0, 0)
+
+        with self.assertRaises(InvalidMoveException):
+            testobj.move(Direction.SOUTH)
+        expected_position = Position(0, 0)
+        self.assertEqual(testobj.position, expected_position)
+
+        with self.assertRaises(InvalidMoveException):
+            testobj.move(Direction.WEST)
+        expected_position = Position(0, 0)
+        self.assertEqual(str(testobj.position), str(expected_position))
+
+        testobj.position = Position(9, 9)
+
+        with self.assertRaises(InvalidMoveException):
+            testobj.move(Direction.NORTH)
+        expected_position = Position(9, 9)
+        self.assertEqual(str(testobj.position), str(expected_position))
+
+        with self.assertRaises(InvalidMoveException):
+            testobj.move(Direction.EAST)
+        expected_position = Position(9, 9)
+        self.assertEqual(str(testobj.position), str(expected_position))

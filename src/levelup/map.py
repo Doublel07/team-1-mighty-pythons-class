@@ -25,8 +25,6 @@ class GameMap:
             for y in [i for i in range(0, self.size[1])]:
                 self.positions.append(Position(x, y))
         
-        #self.position_count = (x + 1) * (y + 1)
-
     def is_valid_position(self, position: Position) -> bool:
        #return position in self.positions 
         # Check Position X, Y Coordinate is Valid

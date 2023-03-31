@@ -24,9 +24,8 @@ class TestCharacter(TestCase):
         self.assertEqual(expected_position, testobj)
 
     def test_move(self):
-        position = 6,6
         expected_name = "arbitrary"
         testobj_char = Character(expected_name)
-        testobj_char_test_move = Character.FakeMove("N")
-
+        testMove = Direction.NORTH
+        testobj_char.move(testMove)
         #self.assertEqual(testobj_char.position, tuple(6,5))

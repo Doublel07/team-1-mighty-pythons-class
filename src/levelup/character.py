@@ -20,9 +20,6 @@ class Character:
         pass
 
     def move(self, direction: Direction):
-        map.direction(direction)
-    
-    def FakeMove(direction):
         pass
 
     def getName(self):

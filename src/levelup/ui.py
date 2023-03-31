@@ -32,6 +32,8 @@ class GameApp:
                 lambda x: x in VALID_DIRECTIONS,
             )
             direction = Direction(response)
+            #print(f"response is equal to {response}")
+            #print(f"direction is equal to {direction}")
             try:
                 self.controller.move(direction)
             except InvalidMoveException:

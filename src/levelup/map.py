@@ -35,4 +35,4 @@ class GameMap:
         self, starting_position: Position, direction: Direction
     ) -> Position:
         # determine if the position calculated is valid
-        pass
+        return True

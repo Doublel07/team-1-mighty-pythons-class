@@ -16,10 +16,19 @@ class TestMap(TestCase):
     def test_valid_position(self):
         test_map = GameMap()
         test_position_values = []
+
+        # Validate all positions within the map are valid
         for i in range(10):
             for j in range(10):
                booleanValue = test_map.is_valid_position(Position(i, j))
                self.assertEqual(booleanValue,True)
     
+        # Test if Position Calculation is Valid
+        test_calculate_position_value = Position(1,1)
+        test_calculate_position_direction = "n"
+        test_calculate_position_booleanValue = test_map.calculate_position(test_calculate_position_value, test_calculate_position_direction)
+        self.assertEqual(test_calculate_position_booleanValue, True)
+
+
 
        

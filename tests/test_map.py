@@ -1,5 +1,5 @@
 from unittest import TestCase
-from levelup.map import GameMap
+from levelup.map import GameMap, Direction
 from levelup.position import Position
 
 class TestMap(TestCase):
@@ -25,9 +25,10 @@ class TestMap(TestCase):
     
         # Test if Position Calculation is Valid
         test_calculate_position_value = Position(1,1)
-        test_calculate_position_direction = "n"
-        test_calculate_position_booleanValue = test_map.calculate_position(test_calculate_position_value, test_calculate_position_direction)
-        self.assertEqual(test_calculate_position_booleanValue, True)
+        test_calculate_position_direction = Direction.NORTH
+        test_calculate_position = test_map.calculate_position(test_calculate_position_value, test_calculate_position_direction)
+        test_calculate_position_boolean = test_map.is_valid_position(test_calculate_position)
+        self.assertEqual(test_calculate_position_boolean, True)
 
 
 

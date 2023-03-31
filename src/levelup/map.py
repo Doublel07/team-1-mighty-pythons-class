@@ -20,10 +20,15 @@ class GameMap:
         self.create_positions()
 
     def create_positions(self) -> None:
-        pass
+        self.positions = []
+        for x in [i for i in range(0, self.size[0])]:
+            for y in [i for i in range(0, self.size[1])]:
+                self.positions.append(Position(x, y))
+        
+        #self.position_count = (x + 1) * (y + 1)
 
     def is_valid_position(self, position: Position) -> bool:
-        
+       #return position in self.positions 
         # Check Position X, Y Coordinate is Valid
         if position.coordinates[0] <= 9 and position.coordinates[0] >= 0 and position.coordinates[1] <= 9 and position.coordinates[1] >= 0:
             return True
@@ -35,4 +40,16 @@ class GameMap:
         self, starting_position: Position, direction: Direction
     ) -> Position:
         # determine if the position calculated is valid
-        return True
+        x, y = starting_position.coordinates
+        if direction is Direction.NORTH:
+            y += 1
+        elif direction is Direction.SOUTH:
+            y -= 1
+        elif direction is Direction.EAST:
+            x += 1
+        elif direction is Direction.WEST:
+            x -= 1
+
+        return Position(x, y)
+        
+    
